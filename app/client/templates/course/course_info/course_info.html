@@ -1,7 +1,8 @@
 <template name="CourseInfo">
-       {{#with CourseInfo}}
-        {{CourseInfo.title}}
-        {{cost}}
-        {{unit}}
+    {{#with CourseInfo}}
+
+        <h2 class="orange-text">{{CourseInfo.title}}</h2>
+        <h5>Cost:<small>{{cost}}</small></h5>
+        <h5>Unit:<small>{{unit}}</small></h5>
     {{/with}}
 </template>
