@@ -9,7 +9,7 @@
     } 
   ], 
   // Set to False if using Compose.io 
-  "setupMongo": false,
+  "setupMongo": true,
   // WARNING: Node.js is required! Only skip if you already have Node.js installed on server. 
   "setupNode": true, 
   // WARNING: If nodeVersion omitted will setup 0.10.36 by default. Do not use v, only version number. 
@@ -17,7 +17,7 @@
   // Install PhantomJS in the server 
   "setupPhantom": true, 
   // Application name (No spaces) 
-  "appName": "PromtCare", 
+  "appName": "PromptCare", 
   // Location of app (local directory) 
   "app": "../../app", 
   // Configure environment 
