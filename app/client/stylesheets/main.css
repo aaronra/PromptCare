@@ -1,0 +1,49 @@
+/*****************************************************************************/
+/* main: Style */
+/*****************************************************************************/
+.main {
+}
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+#logo-container {
+    height: 97px;
+    margin-bottom: 12px;
+}
+
+ul.side-nav.fixed li.logo {
+    margin-top: 12px;
+}
+
+ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
+    background-color: rgba(41, 182, 246, 0.5);
+}
+
+.waves-effect.waves-blue {
+    background-color: rgba(0, 150, 136, 0.7);
+}
+
+.login {
+    width: 260px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn, .btn-large {
+    background-color: rgb(43, 148, 208);
+}
+
+.btn, .btn-large:hover {
+    background-color: rgb(41, 182, 246);
+}
+
+.promo {
+    transition: all 0.3s ease-in-out 0s;
+}
