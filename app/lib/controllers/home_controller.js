@@ -6,8 +6,7 @@ HomeController = RouteController.extend({
 
     },
     data: {
-        Course: Course.find({}),
-        CourseInfo: Course.find({_id:this.params.id})
+        Course: Course.find({})
     },
     action: function () {
         this.render('Home');

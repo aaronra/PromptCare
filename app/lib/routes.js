@@ -23,7 +23,7 @@ Router.route('course/addCourse', {
     action: 'AddCourse',
     where: 'client'
 });
-Router.route('course/viewCourse/:_id', {
+Router.route('course/viewCourse/:id', {
     name: 'viewCourse',
     controller: 'HomeController',
     action: 'viewCourse',
