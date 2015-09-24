@@ -10,6 +10,7 @@ body {
 main {
     flex: 1 0 auto;
 }
+
 .icon-block {
     padding: 0 15px;
 }
@@ -53,4 +54,16 @@ ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
 
 .promo {
     transition: all 0.3s ease-in-out 0s;
+}
+
+.at-title > .header {
+    color: #ff9800 !important;
+}
+
+.mdi-alert-warning {
+    color: red;
+}
+
+.at-error.red.lighten-2 {
+    background-color: #29b6f6 !important;
 }

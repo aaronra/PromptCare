@@ -2,11 +2,14 @@ HomeController = RouteController.extend({
     layoutTemplate: 'MasterLayout',
 
     waitOn: function () {
-        return this.subscribe('course');
+        return this.subscribe('course'),
+            this.subscribe('admins');
+
 
     },
     data: {
-        Course: Course.find({})
+        Course: Course.find({}),
+        Admin: Admin.find({})
     },
     action: function () {
         this.render('Home');

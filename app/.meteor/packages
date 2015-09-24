@@ -11,5 +11,13 @@ materialize:materialize@=0.97.0
 aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
+matb33:collection-hooks
+accounts-base
+accounts-password
+useraccounts:materialize
+useraccounts:iron-routing
+useraccounts:core
+accounts-ui
+alanning:roles
 
 

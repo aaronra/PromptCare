@@ -29,3 +29,4 @@ Router.route('course/viewCourse/:id', {
     action: 'viewCourse',
     where: 'client'
 });
+Router.plugin('ensureSignedIn');
