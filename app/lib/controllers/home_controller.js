@@ -3,12 +3,14 @@ HomeController = RouteController.extend({
 
     waitOn: function () {
         return this.subscribe('course'),
-            this.subscribe('admins');
+            this.subscribe('admins'),
+            this.subscribe('module');
 
 
     },
     data: {
         Course: Course.find({}),
+        Module: Modules.find({}),
         Admin: Admin.find({})
     },
     action: function () {
@@ -22,5 +24,8 @@ HomeController = RouteController.extend({
     },
     viewCourse: function () {
         this.render('CourseInfo');
+    },
+    AddModule: function () {
+        this.render('AddModule');
     }
 });

@@ -23,6 +23,12 @@ Router.route('course/addCourse', {
     action: 'AddCourse',
     where: 'client'
 });
+Router.route('module/addModule', {
+    name: 'AddModule',
+    controller: 'HomeController',
+    action: 'AddModule',
+    where: 'client'
+})
 Router.route('course/viewCourse/:id', {
     name: 'viewCourse',
     controller: 'HomeController',
