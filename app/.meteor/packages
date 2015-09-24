@@ -23,7 +23,7 @@ dburles:factory
 useraccounts:iron-routing
 hybrid:assets
 standard-app-packages
-useraccounts:bootstrap
+useraccounts:materialize
 accounts-ui
 
 
