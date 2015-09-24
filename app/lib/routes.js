@@ -29,4 +29,6 @@ Router.route('course/viewCourse/:id', {
     action: 'viewCourse',
     where: 'client'
 });
-Router.plugin('ensureSignedIn');
+Router.plugin('ensureSignedIn', {
+    only: ['Course','AddCourse','viewCourse']
+});
