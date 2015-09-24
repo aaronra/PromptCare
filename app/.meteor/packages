@@ -11,13 +11,19 @@ materialize:materialize@=0.97.0
 aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
-matb33:collection-hooks
-accounts-base
+aldeed:delete-button
 accounts-password
-useraccounts:materialize
-useraccounts:iron-routing
-useraccounts:core
-accounts-ui
 alanning:roles
+zimme:iron-router-active
+dburles:collection-helpers
+momentjs:moment
+mrt:underscore-string-latest
+matb33:collection-hooks
+dburles:factory
+useraccounts:iron-routing
+hybrid:assets
+standard-app-packages
+useraccounts:bootstrap
+accounts-ui
 
 
