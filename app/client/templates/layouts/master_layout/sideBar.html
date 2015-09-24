@@ -3,17 +3,24 @@
         <li class="logo"><a id="logo-container" href="{{pathFor 'home'}}" class="brand-logo">
             <img src="/img/logo.png" id="front-page-logo">
         </a></li>
-        <li class="bold"><a href="{{pathFor 'Course'}}">Add New Course</a></li>
-        <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
+        {{#if currentUser}}
+            {{#if isAdmin}}
+                <li class="bold"><a href="{{pathFor 'Course'}}">Add New Course</a></li>
+            {{/if}}
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
 
-                <div class="collapsible-body" style="display: none;">
-                    <ul>
-                        <li>{{> CourseList}}</li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+                    <div class="collapsible-body" style="display: none;">
+                        <ul>
+                            <li>{{> CourseList}}</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <li class="bold"><a href="#" data-action="logout">Sign Out</a></li>
+        {{else}}
+            <li class="bold"><a href="{{ pathFor 'atSignIn' }}">Sign in</a></li>
+        {{/if}}
     </ul>
 
 
