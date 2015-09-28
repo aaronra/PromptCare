@@ -1,5 +1,5 @@
 <template name="SideBar">
-    <ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+    <ul id="nav-mobile" class="side-nav fixed" style="background-color: #2196F3 !important;left: 0px;">
         <li class="logo"><a id="logo-container" href="{{pathFor 'home'}}" class="brand-logo">
             <img src="/img/logo.png" id="front-page-logo">
         </a></li>
@@ -18,7 +18,7 @@
                     </div>
                 </li>
             </ul>
-            <li class="bold"><a href="#" data-action="logout">Sign Out</a></li>
+
         {{else}}
             <li class="bold"><a href="{{ pathFor 'atSignIn' }}">Sign in</a></li>
         {{/if}}
