@@ -5,14 +5,15 @@
         </a></li>
         {{#if currentUser}}
             {{#if isAdmin}}
-                <li class="bold"><a href="{{pathFor 'Course'}}">Add New Course</a></li>
+                <li class="bold"><a href="{{pathFor 'AddCourse'}}">Add New Course</a></li>
+                <li class="bold"><a href="{{pathFor 'AddModule'}}">Add New Module</a></li>
             {{/if}}
             <ul class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
 
                     <div class="collapsible-body" style="display: none;">
                         <ul>
-                            <li>{{> CourseList}}</li>
+                            {{> CourseList}}
                         </ul>
                     </div>
                 </li>

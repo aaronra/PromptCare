@@ -7,6 +7,9 @@ Meteor.publish('course', function (id) {
     if(!id)return Course.find();
     return Course.find({_id:id});
 });
+Meteor.publish('module', function (){
+    return Modules.find({});
+})
 Meteor.publish('admins', function (/* args */) {
     return Admin.find();
 });

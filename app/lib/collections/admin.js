@@ -1,5 +1,12 @@
 Admin = new Mongo.Collection('admin');
 
+Admin.attachSchema(new SimpleSchema({
+  "email": {
+    type: String,
+    regEx: SimpleSchema.RegEx.Email,
+    unique: true
+  }
+}));
 
 if (Meteor.isServer) {
   Admin.allow({

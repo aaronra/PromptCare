@@ -1,14 +1,19 @@
-Course = new Mongo.Collection('course');
-Course.attachSchema(new SimpleSchema({
-    title: {
+Modules = new Mongo.Collection('modules');
+Modules.attachSchema(new SimpleSchema({
+    coursecode: {
         type: String,
-        label: "Title",
+        label: 'Course Code',
+        max: 200
+    },
+    moduletitle: {
+        type: String,
+        label: 'Module Title',
         max: 200
     }
 }));
 
 if (Meteor.isServer) {
-    Course.allow({
+    Modules.allow({
         insert: function (userId, doc) {
             return true;
         },
@@ -22,7 +27,7 @@ if (Meteor.isServer) {
         }
     });
 
-    Course.deny({
+    Modules.deny({
         insert: function (userId, doc) {
             return false;
         },
