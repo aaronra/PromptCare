@@ -14,7 +14,7 @@
 }
 ],
 // Install MongoDB on the server. Does not destroy the local MongoDB on future setups
-"setupMongo": false,
+"setupMongo": true,
 // Application name (no spaces).
 "setupNode": true,
 "nodeVersion": "0.10.38",
