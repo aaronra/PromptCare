@@ -67,3 +67,12 @@ ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
 .at-error.red.lighten-2 {
     background-color: #29b6f6 !important;
 }
+
+li.logo {
+    border-bottom: 1px solid #000 !important;
+}
+
+.col.s12.m8.offset-m2.l4.offset-l4.z-depth-1 {
+    border-radius: 40px !important;
+    padding: 10px;
+}

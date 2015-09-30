@@ -4,6 +4,13 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
+                    {{#if currentUser}}
+                        <div class="right">
+                            <span class="bold">{{currentUser.profile.name}}</span>
+                            <a href="#" class="btn" data-action="logout">Log Out</a>
+                        </div>
+
+                    {{/if}}
                     <br><br><br>
                     {{> yield}}
                 </div>
@@ -11,5 +18,5 @@
         </div>
     </main>
     <br><br><br><br>
-    {{> Footer}}
+
 </template>
