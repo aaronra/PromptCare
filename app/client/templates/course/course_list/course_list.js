@@ -15,7 +15,6 @@ Template.CourseList.created = function () {
 };
 
 Template.CourseList.rendered = function () {
-    $('.button-collapse').sideNav();
     $('.collapsible').collapsible({
         accordion: false
     });
