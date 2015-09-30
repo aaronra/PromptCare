@@ -6,8 +6,5 @@ Template.MasterLayout.events({
     }
 });
 Template.MasterLayout.onRendered(function () {
-    $('.button-collapse').sideNav();
-    $('.collapsible').collapsible({
-        accordion: false
-    });
+
 });

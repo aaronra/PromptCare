@@ -19,7 +19,7 @@ Template.Course.helpers({
 Template.Course.created = function () {
 };
 
-Template.Course.rendered = function () {
+Template.Course.onRendered = function () {
 };
 
 Template.Course.destroyed = function () {
