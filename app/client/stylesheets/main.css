@@ -29,7 +29,11 @@ ul.side-nav.fixed li.logo {
 }
 
 ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
-    background-color: rgba(41, 182, 246, 0.5);
+    background-color: rgba(41, 182, 246, 0.5) !important;
+}
+
+.side-nav {
+    background-color: #29B6F6 !important;
 }
 
 .waves-effect.waves-blue {
@@ -79,4 +83,20 @@ li.logo {
 
 .panel-title {
     color: rgb(33, 150, 243) !important
+}
+
+header {
+    border-bottom: solid 2px #29b6f6;
+}
+
+header > div.right {
+    padding: 10px;
+}
+header > div.left{
+    padding: 17px;
+}
+@media screen and (min-width: 993px) {
+.side-nav.fixed{
+    left:0 !important;
+}
 }

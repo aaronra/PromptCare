@@ -24,6 +24,10 @@ useraccounts:iron-routing
 hybrid:assets
 standard-app-packages
 useraccounts:materialize
+accounts-base
 accounts-ui
+fortawesome:fontawesome
+zimme:active-route
+
 
 

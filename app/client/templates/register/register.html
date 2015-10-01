@@ -1,0 +1,56 @@
+<template name="Register">
+    <h1>Sign up</h1>
+
+    <div class="row">
+        <form id="register-form" action="action" class="col s12">
+
+
+            <p>
+                <input name="role" type="radio" id="student"/>
+                <label for="student">student</label>
+            </p>
+
+            <p>
+                <input name="role" type="radio" id="member"/>
+                <label for="member">member</label>
+            </p>
+
+            <div class="input-field col s12 l6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s12 l6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+            <h5>Gender</h5>
+            <p>
+                <input name="gender" type="radio" id="male"/>
+                <label for="male">male</label>
+            </p>
+
+            <p>
+                <input name="gender" type="radio" id="female"/>
+                <label for="female">female</label>
+            </p>
+            <div class="input-field col s12">
+                <input type="text" id="Contact" class="validate">
+                <label for="Contact">Contact Number</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input type="email" id="account-email" class="validate">
+                <label for="account-email">Email</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="password" id="account-password" class="validate">
+                <label for="account-password">Password</label>
+            </div>
+
+                <div class="input-field col s12">
+                    <a href="#" type="submit" id="create-account" class="btn">Create an Account</a>
+                </div>
+
+        </form>
+    </div>
+</template>

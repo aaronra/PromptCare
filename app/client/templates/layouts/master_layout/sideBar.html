@@ -1,14 +1,63 @@
 <template name="SideBar">
-    <ul id="nav-mobile" class="side-nav fixed" style="background-color: #2196F3 !important;left: 0px;">
+    <ul id="nav-mobile" class="side-nav fixed {{isActiveRoute 'Enroll'}}" style="background-color: #2196F3 !important;left: 0px;">
         <li class="logo"><a id="logo-container" href="{{pathFor 'home'}}" class="brand-logo">
             <img src="/img/logo.png" id="front-page-logo">
         </a></li>
         {{#if currentUser}}
             {{#if isAdmin}}
+                <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Branch</a>
+
+                        <div class="collapsible-body" style="display: none;">
+                            <ul>
+                                {{> CourseList}}
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Enrollees</a>
+
+                        <div class="collapsible-body" style="display: none;">
+                            <ul>
+                                <li class="bold"><a href="{{pathFor 'StudentList'}}">Students List</a></li>
+                                <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Send Schedule</a></li>
+                                <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Send Billing</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Subscribers</a>
+
+                        <div class="collapsible-body" style="display: none;">
+                            <ul>
+                                <li class="bold"><a href="{{pathFor 'MemberList'}}">Member List</a></li>
+                                <li class="bold"><a href="{{pathFor 'Enroll'}}">Send Schedule</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
                 <li class="bold"><a href="{{pathFor 'AddCourse'}}">Add New Course</a></li>
                 <li class="bold"><a href="{{pathFor 'AddModule'}}">Add New Module</a></li>
+                <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
+
+                        <div class="collapsible-body" style="display: none;">
+                            <ul>
+                                {{> CourseList}}
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             {{/if}}
-            <li class="bold"><a href="{{pathFor 'Enroll'}}">Enroll</a></li>
+            <!--Student-->
+            <li class="bold"><a href="{{pathFor 'Enroll'}}">Student Registration</a></li>
+            <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Student Schedule</a></li>
+            <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Student Billing</a></li>
+            <li class="bold"><a href="{{pathFor 'StudentInfo'}}">Student Information</a></li>
             <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
 
@@ -20,8 +69,11 @@
                 </li>
             </ul>
 
-        {{else}}
-            <li class="bold"><a href="{{ pathFor 'atSignIn' }}">Sign in</a></li>
+            <!--Member-->
+            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Registration</a></li>
+            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Billing</a></li>
+            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Information</a></li>
+
         {{/if}}
     </ul>
 </template>

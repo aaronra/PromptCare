@@ -1,0 +1,19 @@
+<template name="Login">
+    <div class="row">
+        <form id="login-form" action="action" class="col s12">
+            <div class="input-field col s12 l5">
+                <input id="login-email" type="email" class="validate">
+                <label for="login-email">Email</label>
+            </div>
+            <div class="input-field col s12 l5">
+                <input id="login-password" type="password" class="validate">
+                <label for="login-password">Password</label>
+            </div>
+            <div class="input-field col s12 l2">
+                <button type="submit" id="login-button" class="btn">Sign in</button>
+
+                <p>Don't have an account?<a href="{{pathFor 'atSignUp'}}"> Register</a></p>
+            </div>
+        </form>
+    </div>
+</template>

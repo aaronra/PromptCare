@@ -1,0 +1,16 @@
+/*****************************************************************************/
+/* StudentInfo: Style */
+/*****************************************************************************/
+.student-info {
+}
+table.left-thead tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+table.left-thead thead {
+    display: block;
+    float: left;
+}

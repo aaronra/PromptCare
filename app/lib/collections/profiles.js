@@ -5,9 +5,9 @@ Profiles.attachSchema(new SimpleSchema({
         label: "picture 1x1",
         max: 200
     },
-    webBase:{
-        type:Object,
-        label:'Web-Based Information System'
+    webBase: {
+        type: Object,
+        label: 'Web-Based Information System'
     },
     'webBase.ULI': {
         type: String,
@@ -332,81 +332,57 @@ Profiles.attachSchema(new SimpleSchema({
     /*6*/
     scholar: {
         type: Object,
-label:'6. Student/Scholar Voucher Number'
-},
-'scholar.qualification': {
-    type: String,
-        label
-:
-    "Course/Qualification",
-        autoform
-:
-    {
-        afFormGroup: {
-            'formgroup-class'
-        :
-            'input-field'
+        label: '6. Student/Scholar Voucher Number'
+    },
+    'scholar.qualification': {
+        type: String,
+        label: "Course/Qualification",
+        autoform: {
+            afFormGroup: {
+                'formgroup-class': 'input-field'
+            }
         }
+        ,
+        max: 200
     }
-,
-    max: 200
-}
-,
-/*7 scholar only*/
-'scholar.voucherNumber': {
-    type: String,
-        label
-:
-    "scholar voucher number",
-        autoform
-:
-    {
-        afFormGroup: {
-            'formgroup-class'
-        :
-            'input-field'
+    ,
+    /*7 scholar only*/
+    'scholar.voucherNumber': {
+        type: String,
+        label: "scholar voucher number",
+        autoform: {
+            afFormGroup: {
+                'formgroup-class': 'input-field'
+            }
         }
+        ,
+        max: 200
     }
-,
-    max: 200
-}
-,
-'scholar.scholarshipPackage': {
-    type: String,
-        label
-:
-    "Scholarship Package",
-        autoform
-:
-    {
-        afFormGroup: {
-            'formgroup-class'
-        :
-            'input-field'
+    ,
+    'scholar.scholarshipPackage': {
+        type: String,
+        label: "Scholarship Package",
+        autoform: {
+            afFormGroup: {
+                'formgroup-class': 'input-field'
+            }
         }
+        ,
+        max: 200
     }
-,
-    max: 200
-}
-,
-'scholar.dateRegistered': {
-    type: String,
-        label
-:
-    "Month of Birth",
-        autoform
-:
-    {
-        afFormGroup: {
-            'formgroup-class'
-        :
-            'input-field'
+    ,
+    'scholar.dateRegistered': {
+        type: String,
+        label: "Month of Birth",
+        autoform: {
+            afFormGroup: {
+                'formgroup-class': 'input-field'
+            }
         }
+        ,
+        max: 200
     }
-,
-    max: 200
-}
-,
+    ,
 }))
 ;
 

@@ -5,6 +5,19 @@
                 <div class="nav-wrapper"><a class="page-title" style="font-family: serif;">Prompt C.A.R.E</a></div>
             </div>
         </nav>
+        {{#if currentUser}}
+            <div class="left">
+                Branch:
+            </div>
+            <div class="right">
+                <span class="bold"><i class="fa fa-user"></i> {{currentUser.profile.name}}</span>
+                <a href="#" class="btn" data-action="logout">Log Out</a>
+            </div>
+        {{else}}
+            <!--{{#if isRegister}}
+                {{> Login}}
+            {{/if}}-->
+        {{/if}}
         <div class="container"><a href="#" data-activates="nav-mobile" id="hide-icon-mobile"
                                   class="button-collapse top-nav full hide-on-large-only"><i
                 class="mdi-navigation-menu"></i></a></div>
