@@ -1,0 +1,47 @@
+<template name="StudentSchedule">
+    <div class="row">
+    <div class="input-field col s12 l6">
+        <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <label>Batch:</label>
+    </div>
+    <div class="input-field col s12 l6">
+        <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">EMT</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+        <label>Course Enrolled:</label>
+    </div>
+    </div>
+
+    <table class="striped">
+        <thead>
+        <tr>
+            <th data-field="id">Subject Code</th>
+            <th data-field="description">Subject Description</th>
+            <th data-field="units">Units</th>
+            <th data-field="Schedule">Schedule</th>
+            <th data-field="Date">Date</th>
+            <th data-field="Room">Room</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1111</td>
+            <td>English</td>
+            <td>3.0</td>
+            <td>8:00-10:00am</td>
+            <td>MWF</td>
+            <td>Prompt 101</td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn right">Send</button>
+</template>

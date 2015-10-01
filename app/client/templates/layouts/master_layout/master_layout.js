@@ -7,6 +7,7 @@ Template.MasterLayout.events({
 });
 Template.MasterLayout.onRendered(function () {
     $('.button-collapse').sideNav({
-        closeOnClick: true
+        closeOnClick: true,
+        'edge': 'left'
     });
 });

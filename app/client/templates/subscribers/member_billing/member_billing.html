@@ -1,0 +1,35 @@
+<template name="MemberBilling">
+    <h1>Billing Information</h1>
+
+    <div class="row">
+        <div class="input-field col s5">
+        </div>
+        <div class="input-field col s6">
+            <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Installment</option>
+                <option value="2">Option 2</option>
+            </select>
+            <label>Payment Mode</label>
+        </div>
+    </div>
+    <table class="striped">
+        <thead>
+        <tr>
+            <th data-field="payment">Payment Schedule</th>
+            <th data-field="date">Due Date</th>
+            <th data-field="amount">Amount</th>
+            <th data-field="total">Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Upon Enrollment</td>
+            <td>06-01-2015</td>
+            <td>6,625.00</td>
+            <td>6,625.00</td>
+
+        </tr>
+        </tbody>
+    </table>
+</template>

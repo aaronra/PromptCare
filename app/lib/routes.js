@@ -10,6 +10,12 @@ Router.route('/', {
     action: 'action',
     where: 'client'
 });
+Router.route('register', {
+    name: 'Register',
+    controller: 'HomeController',
+    action: 'Register',
+    where: 'client'
+});
 
 Router.route('/course', {
     name: 'Course',
@@ -41,4 +47,49 @@ Router.route('course/viewCourse/:id', {
     action: 'viewCourse',
     where: 'client'
 });
-Router.plugin('ensureSignedIn');
+
+Router.route('enrollees/student-list', {
+    name: 'StudentList',
+    controller: 'HomeController',
+    action: 'StudentList',
+    where: 'client'
+});
+Router.route('enrollees/Student-Schedule', {
+    name: 'StudentSchedule',
+    controller: 'HomeController',
+    action: 'StudentSchedule',
+    where: 'client'
+});
+Router.route('enrollees/Student-Grades', {
+    name: 'StudentGrades',
+    controller: 'HomeController',
+    action: 'StudentGrades',
+    where: 'client'
+});
+Router.route('enrollees/Student-Grades/:id', {
+    name: 'GradesInfo',
+    controller: 'HomeController',
+    action: 'GradesInfo',
+    where: 'client'
+});
+Router.route('enrollees/Student-Billing', {
+    name: 'StudentBilling',
+    controller: 'HomeController',
+    action: 'StudentBilling',
+    where: 'client'
+});
+Router.route('enrollees/Student-Billing/:id', {
+    name: 'BillingInfo',
+    controller: 'HomeController',
+    action: 'BillingInfo',
+    where: 'client'
+});
+
+Router.route('subsribes/Member-List', {
+    name: 'MemberList',
+    controller: 'HomeController',
+    action: 'MemberList',
+    where: 'client'
+});
+
+ Router.plugin('ensureSignedIn');

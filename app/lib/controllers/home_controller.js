@@ -30,7 +30,28 @@ HomeController = RouteController.extend({
     AddModule: function () {
         this.render('AddModule');
     },
-    Enroll: function(){
+    Enroll: function () {
         this.render('Enroll');
+    },
+    Register: function () {
+        this.render('Register');
+    },
+    StudentList: function () {
+        this.render('StudentList');
+    },
+    StudentSchedule: function () {
+        this.render('StudentSchedule');
+    },
+    StudentGrades: function () {
+        this.render('StudentGrades');
+    },
+    StudentInfo: function () {
+        this.render('StudentInfo');
+    },
+    StudentBilling: function () {
+        this.render('StudentBilling');
+    },
+    MemberList: function () {
+        this.render('MemberList');
     }
 });
