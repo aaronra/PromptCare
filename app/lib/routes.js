@@ -17,6 +17,12 @@ Router.route('/course', {
     action: 'Course',
     where: 'client'
 });
+Router.route('enrollment/registration', {
+    name: 'Enroll',
+    controller: 'HomeController',
+    action: 'Enroll',
+    where: 'client'
+});
 Router.route('course/addCourse', {
     name: 'AddCourse',
     controller: 'HomeController',

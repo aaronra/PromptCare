@@ -13,3 +13,6 @@ Meteor.publish('module', function (){
 Meteor.publish('admins', function (/* args */) {
     return Admin.find();
 });
+Meteor.publish('profiles', function (){
+    return Profiles.find({});
+})

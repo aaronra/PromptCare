@@ -76,3 +76,7 @@ li.logo {
     border-radius: 40px !important;
     padding: 10px;
 }
+
+.panel-title {
+    color: rgb(33, 150, 243) !important
+}
