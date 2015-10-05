@@ -1,0 +1,12 @@
+<template name="Rooms">
+    <h1>List Of Rooms</h1>
+    <ul>
+        {{#each Rooms}}
+            <li>{{this.number}}</li>
+            <li>{{this.location}}</li>
+            <li>{{#linkTo route='updateRoom' id=this._id }}Update Branch{{this._id}}{{/linkTo}}</li>
+            <li>{{> quickRemoveButton collection="Rooms" _id=this._id}} </li>
+
+        {{/each}}
+    </ul>
+</template>

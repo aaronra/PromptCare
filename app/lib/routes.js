@@ -28,6 +28,24 @@ Router.route('branch/update/:id', {
     action: 'UpdateBranch',
     where: 'client'
 });
+Router.route('room', {
+    name: 'room',
+    controller: 'HomeController',
+    action: 'Room',
+    where: 'client'
+});
+Router.route('room/add', {
+    name: 'room.add',
+    controller: 'HomeController',
+    action: 'AddRoom',
+    where: 'client'
+});
+Router.route('room/update/:id', {
+    name: 'updateRoom',
+    controller: 'HomeController',
+    action: 'UpdateRoom',
+    where: 'client'
+});
 Router.route('register', {
     name: 'Register',
     controller: 'HomeController',

@@ -20,3 +20,7 @@ Meteor.publish('profiles', function (){
 Meteor.publish('branchlist', function (/* args */) {
   return Branches.find();
 });
+
+Meteor.publish('rooms', function (/* args */) {
+  return Rooms.find();
+});

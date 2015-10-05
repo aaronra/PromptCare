@@ -21,6 +21,20 @@
                     </li>
                 </ul>
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                        <i class="mdi-navigation-chevron-right left collapsableicon"></i>Rooms</a>
+
+                        <div class="collapsible-body" style="display: none;">
+                            <ul>
+                                <li class="bold {{isActiveRoute 'room'}}"><a href="{{pathFor 'room'}}">Room
+                                    List</a></li>
+                                <li class="bold {{isActiveRoute 'room.add'}}"><a href="{{pathFor 'room.add'}}">Add
+                                    New Room</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
                     <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i
                             class="mdi-navigation-chevron-right left collapsableicon"></i>Enrollees</a>
 
