@@ -1,3 +1,12 @@
 <template name="Branches">
-  <h1>Find me in app/client/templates/branches/branches</h1>
+    <h1>List Of Branches</h1>
+    <ul>
+        {{#each Branches}}
+            <li>{{this.name}}</li>
+            <li>{{this.address}}</li>
+            <li>{{#linkTo route='updateBranch' id=this._id }}Update Branch{{this._id}}{{/linkTo}}</li>
+            <li>{{> quickRemoveButton collection="Branches" _id=this._id}} </li>
+
+        {{/each}}
+    </ul>
 </template>

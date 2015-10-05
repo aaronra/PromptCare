@@ -10,6 +10,24 @@ Router.route('/', {
     action: 'action',
     where: 'client'
 });
+Router.route('branch', {
+    name: 'branch',
+    controller: 'HomeController',
+    action: 'Branch',
+    where: 'client'
+});
+Router.route('branch/add', {
+    name: 'branch.add',
+    controller: 'HomeController',
+    action: 'AddBranch',
+    where: 'client'
+});
+Router.route('branch/update/:id', {
+    name: 'updateBranch',
+    controller: 'HomeController',
+    action: 'UpdateBranch',
+    where: 'client'
+});
 Router.route('register', {
     name: 'Register',
     controller: 'HomeController',

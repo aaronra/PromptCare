@@ -12,13 +12,17 @@
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
-                                {{> CourseList}}
+                                <li class="bold {{isActiveRoute 'branch'}}"><a href="{{pathFor 'branch'}}">Branch
+                                    List</a></li>
+                                <li class="bold {{isActiveRoute 'branch.add'}}"><a href="{{pathFor 'branch.add'}}">Add
+                                    New Branch</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i class="mdi-navigation-chevron-right left collapsableicon"></i>Enrollees</a>
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i
+                            class="mdi-navigation-chevron-right left collapsableicon"></i>Enrollees</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
@@ -31,25 +35,31 @@
                     </li>
                 </ul>
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i class="mdi-navigation-chevron-right left collapsableicon"></i>Subscribers</a>
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i
+                            class="mdi-navigation-chevron-right left collapsableicon"></i>Subscribers</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
-                                <li class="bold"><a href="{{pathFor 'MemberList'}}">Member List</a></li>
-                                <li class="bold"><a href="{{pathFor 'Enroll'}}">Send Schedule</a></li>
+                                <li class="bold {{isActiveRoute 'MemberList'}}"><a href="{{pathFor 'MemberList'}}">Member
+                                    List</a></li>
+                                <li class="bold {{isActiveRoute 'Enroll'}}"><a href="{{pathFor 'Enroll'}}">Send
+                                    Schedule</a></li>
 
                             </ul>
                         </div>
                     </li>
                 </ul>
-                <li class="bold"><a href="{{pathFor 'AddCourse'}}">Add New Course</a></li>
-                <li class="bold"><a href="{{pathFor 'AddModule'}}">Add New Module</a></li>
+
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                        <i class="mdi-navigation-chevron-right left collapsableicon"></i>Courses</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
-                                {{> CourseList}}
+                                <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddCourse'}}">Add New
+                                    Course</a></li>
+                                <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddModule'}}">Add New
+                                    Module</a></li>
                             </ul>
                         </div>
                     </li>
@@ -60,6 +70,7 @@
             <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Student Schedule</a></li>
             <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Student Billing</a></li>
             <li class="bold"><a href="{{pathFor 'StudentInfo'}}">Student Information</a></li>
+
             <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
 
@@ -70,7 +81,6 @@
                     </div>
                 </li>
             </ul>
-
             <!--Member-->
             <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Registration</a></li>
             <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Billing</a></li>

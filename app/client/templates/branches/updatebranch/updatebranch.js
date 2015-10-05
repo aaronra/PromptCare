@@ -1,23 +1,26 @@
 /*****************************************************************************/
-/* AddBranch: Event Handlers */
+/* Updatebranch: Event Handlers */
 /*****************************************************************************/
-Template.AddBranch.events({
+Template.Updatebranch.events({
 });
 
 /*****************************************************************************/
-/* AddBranch: Helpers */
+/* Updatebranch: Helpers */
 /*****************************************************************************/
-Template.AddBranch.helpers({
+Template.Updatebranch.helpers({
+    selectedBranch:function(){
+        return Branches.findOne({_id:Router.current().params.id});
+    }
 });
 
 /*****************************************************************************/
-/* AddBranch: Lifecycle Hooks */
+/* Updatebranch: Lifecycle Hooks */
 /*****************************************************************************/
-Template.AddBranch.created = function () {
+Template.Updatebranch.created = function () {
 };
 
-Template.AddBranch.rendered = function () {
+Template.Updatebranch.rendered = function () {
 };
 
-Template.AddBranch.destroyed = function () {
+Template.Updatebranch.destroyed = function () {
 };

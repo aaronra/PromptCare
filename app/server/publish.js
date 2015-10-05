@@ -16,3 +16,7 @@ Meteor.publish('admins', function (/* args */) {
 Meteor.publish('profiles', function (){
     return Profiles.find({});
 })
+
+Meteor.publish('branchlist', function (/* args */) {
+  return Branches.find();
+});

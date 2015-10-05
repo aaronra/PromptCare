@@ -7,14 +7,21 @@
         </nav>
         {{#if currentUser}}
             <div class="left">
-                Branch:
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Select Branch</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                    {{#each Branches}}
+                        <li>{{this.name}}</li>
+                    {{/each}}
+                </ul>
             </div>
             <div class="right">
+                <span class="bold"><a href="{{pathFor 'dashboard'}}">Dashboard</a></span>
                 <span class="bold"><i class="fa fa-user"></i> {{currentUser.profile.name}}</span>
                 <a href="#" class="btn" data-action="logout">Log Out</a>
             </div>
         {{else}}
             <!--{{#if isRegister}}
+
                 {{> Login}}
             {{/if}}-->
         {{/if}}
