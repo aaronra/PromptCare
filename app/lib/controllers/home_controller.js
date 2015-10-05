@@ -67,6 +67,9 @@ HomeController = RouteController.extend({
     },
     UpdateBranch:function(){
         this.render('Updatebranch');
+    },
+    Invoice:function(){
+        this.render('Invoice');
     }
 
 });
