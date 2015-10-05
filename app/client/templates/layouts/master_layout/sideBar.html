@@ -1,12 +1,14 @@
 <template name="SideBar">
-    <ul id="nav-mobile" class="side-nav fixed {{isActiveRoute 'Enroll'}}" style="background-color: #2196F3 !important;left: 0px;">
+    <ul id="nav-mobile" class="side-nav fixed {{isActiveRoute 'Enroll'}}"
+        style="background-color: #2196F3 !important;left: 0px;">
         <li class="logo"><a id="logo-container" href="{{pathFor 'home'}}" class="brand-logo">
             <img src="/img/logo.png" id="front-page-logo">
         </a></li>
         {{#if currentUser}}
             {{#if isAdmin}}
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Branch</a>
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                        <i class="mdi-navigation-chevron-right left collapsableicon"></i>Branch</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
@@ -16,7 +18,7 @@
                     </li>
                 </ul>
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Enrollees</a>
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i class="mdi-navigation-chevron-right left collapsableicon"></i>Enrollees</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
@@ -29,7 +31,7 @@
                     </li>
                 </ul>
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Subscribers</a>
+                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><i class="mdi-navigation-chevron-right left collapsableicon"></i>Subscribers</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
