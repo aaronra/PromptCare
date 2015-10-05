@@ -6,7 +6,8 @@ HomeController = RouteController.extend({
             this.subscribe('admins'),
             this.subscribe('profiles'),
             this.subscribe('module'),
-            this.subscribe('branchlist');
+            this.subscribe('branchlist'),
+            this.subscribe('rooms');
 
 
     },
@@ -15,7 +16,8 @@ HomeController = RouteController.extend({
         Module: Modules.find({}),
         Admin: Admin.find({}),
         Profile: Profiles.find({}),
-        Branches: Branches.find({})
+        Branches: Branches.find({}),
+        Rooms: Rooms.find({})
     },
     action: function () {
         this.render('Home');
@@ -68,8 +70,14 @@ HomeController = RouteController.extend({
     UpdateBranch:function(){
         this.render('Updatebranch');
     },
-    Invoice:function(){
-        this.render('Invoice');
+    Room: function(){
+        this.render('Rooms');
+    },
+    AddRoom: function(){
+        this.render('Addroom');
+    },
+    UpdateRoom:function(){
+        this.render('UpdateRooms');
     }
 
 });
