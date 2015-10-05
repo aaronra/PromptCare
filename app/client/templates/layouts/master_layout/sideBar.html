@@ -75,12 +75,13 @@
                     <div class="collapsible-body" style="display: none;">
                         <ul>
                             {{> CourseList}}
-                            {{#unless isAdmin}}
+                            {{#if isAdmin}}
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddCourse'}}">Add New
                                     Course</a></li>
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddModule'}}">Add New
                                     Module</a></li>
-                            {{/unless}}
+                            {{/if}}
+                            <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddCourse'}}">Available Courses</a></li>
                         </ul>
                     </div>
                 </li>

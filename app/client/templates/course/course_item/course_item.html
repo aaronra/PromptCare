@@ -1,5 +1,11 @@
 <template name="CourseItem">
-    {{#with Course}}
-        {{#linkTo route='viewCourse' id=_id}}{{title}}{{/linkTo}}
-    {{/with}}
+    {{#each Course}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.address}}</td>
+            <td>{{#linkTo route='updateBranch' id=this._id class='btn btn-primary'}}Update{{/linkTo}}
+                {{> quickRemoveButton collection="Course" class='btn red' _id=this._id}}
+            </td>
+        </tr>
+    {{/each}}
 </template>

@@ -4,6 +4,25 @@ Course.attachSchema(new SimpleSchema({
         type: String,
         label: "Title",
         max: 200
+    },
+    branch: {
+        type: String,
+        optional: false,
+        label: "Branch Available",
+        autoform: {
+            afFieldInput: {
+                options: function () {
+                    var branches = Branches.find().fetch();
+                    var options = [];
+                    console.log(branches);
+                    for (branchs in branches) {
+                        var option = {label: branches[branchs].name, value: branches[branchs].name};
+                        options.push(option)
+                    }
+                    return options;
+                }
+            }
+        }
     }
 }));
 

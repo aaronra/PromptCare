@@ -1,4 +1,14 @@
 <template name="Course">
-    <h2>Course</h2>
-    <a href="{{pathFor 'AddCourse'}}" class="btn">Add New Course</a>
+    <table class="striped">
+        <thead>
+        <tr>
+            <th data-field="name">Name</th>
+            <th data-field="address">Address</th>
+            <th data-field="address">Operation</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{> CourseItem}}
+        </tbody>
+    </table>
 </template>
