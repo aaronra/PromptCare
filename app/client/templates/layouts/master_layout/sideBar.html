@@ -40,7 +40,7 @@
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
-                                <li class="bold"><a href="{{pathFor 'StudentList'}}">Students List</a></li>
+                                <li class="bold"><a href="{{pathFor 'EnrolleeList'}}">Enrollee List</a></li>
                                 <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Send Schedule</a></li>
                                 <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Send Billing</a></li>
 
@@ -75,6 +75,7 @@
                     <div class="collapsible-body" style="display: none;">
                         <ul>
                             {{> CourseList}}
+                            <li class="bold {{isActiveRoute 'Course'}}"><a href="{{pathFor 'Course'}}">Course List</a></li>
                             {{#if isAdmin}}
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddCourse'}}">Add New
                                     Course</a></li>
@@ -95,10 +96,9 @@
                         <ul>
 
                             {{#unless isAdmin}}
-                                <li class="bold"><a href="{{pathFor 'Enroll'}}">Student Registration</a></li>{{/unless}}
+                             <li class="bold"><a href="{{pathFor 'Enroll'}}">Student Registration</a></li>{{/unless}}
                             <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Student Schedule</a></li>
                             <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Student Billing</a></li>
-                            <li class="bold"><a href="{{pathFor 'StudentInfo'}}">Student Information</a></li>
                         </ul>
                     </div>
                 </li>

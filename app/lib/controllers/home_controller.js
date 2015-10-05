@@ -7,12 +7,14 @@ HomeController = RouteController.extend({
             this.subscribe('profiles'),
             this.subscribe('module'),
             this.subscribe('branchlist'),
-            this.subscribe('rooms');
+            this.subscribe('rooms'),
+            this.subscribe('userData');
 
 
     },
     data: {
         Course: Course.find({}),
+        Users: Meteor.users.find({}),
         Module: Modules.find({}),
         Admin: Admin.find({}),
         Profile: Profiles.find({}),
@@ -31,6 +33,9 @@ HomeController = RouteController.extend({
     viewCourse: function () {
         this.render('CourseInfo');
     },
+    updateCourse: function () {
+        this.render('UpdateCourse');
+    },
     AddModule: function () {
         this.render('AddModule');
     },
@@ -40,8 +45,8 @@ HomeController = RouteController.extend({
     Register: function () {
         this.render('Register');
     },
-    StudentList: function () {
-        this.render('StudentList');
+    EnrolleeList: function () {
+        this.render('Enrollees');
     },
     StudentSchedule: function () {
         this.render('StudentSchedule');

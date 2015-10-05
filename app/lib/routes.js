@@ -53,16 +53,29 @@ Router.route('register', {
     where: 'client'
 });
 
+
+Router.route('enrollment/registration', {
+    name: 'Enroll',
+    controller: 'HomeController',
+    action: 'Enroll',
+    where: 'client'
+});
 Router.route('/course', {
     name: 'Course',
     controller: 'HomeController',
     action: 'Course',
     where: 'client'
 });
-Router.route('enrollment/registration', {
-    name: 'Enroll',
+Router.route('course/viewCourse/:id', {
+    name: 'viewCourse',
     controller: 'HomeController',
-    action: 'Enroll',
+    action: 'viewCourse',
+    where: 'client'
+});
+Router.route('course/update/:id', {
+    name: 'updatewCourse',
+    controller: 'HomeController',
+    action: 'updateCourse',
     where: 'client'
 });
 Router.route('course/addCourse', {
@@ -77,17 +90,12 @@ Router.route('module/addModule', {
     action: 'AddModule',
     where: 'client'
 })
-Router.route('course/viewCourse/:id', {
-    name: 'viewCourse',
-    controller: 'HomeController',
-    action: 'viewCourse',
-    where: 'client'
-});
+
 
 Router.route('enrollees/student-list', {
-    name: 'StudentList',
+    name: 'EnrolleeList',
     controller: 'HomeController',
-    action: 'StudentList',
+    action: 'EnrolleeList',
     where: 'client'
 });
 Router.route('enrollees/Student-Schedule', {

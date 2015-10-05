@@ -2,9 +2,22 @@
     {{#each Course}}
         <tr>
             <td>{{this.title}}</td>
-            <td>{{this.address}}</td>
-            <td>{{#linkTo route='updateBranch' id=this._id class='btn btn-primary'}}Update{{/linkTo}}
-                {{> quickRemoveButton collection="Course" class='btn red' _id=this._id}}
+            <td>{{this.branch}}</td>
+            <td>
+                {{#unless isAdmin}}
+                    {{#unless hasEnrolled}}
+                        <a id="enroll" class="btn btn-primary" href="">Enroll</a>
+                    {{/unless}}
+                    {{#if hasEnrolled}}
+                        Please Go to the nearest PromtCare Station to pay your balance to fully enroll
+                    {{/if}}
+                {{/unless}}
+                {{#if isAdmin}}
+                    {{#linkTo route='updateCourse' id=this._id class='btn btn-primary'}}Update{{/linkTo}}
+                    {{> quickRemoveButton collection="Course" class='btn red' _id=this._id}}
+                {{/if}}
+
+
             </td>
         </tr>
     {{/each}}

@@ -24,3 +24,6 @@ Meteor.publish('branchlist', function (/* args */) {
 Meteor.publish('rooms', function (/* args */) {
   return Rooms.find();
 });
+Meteor.publish("userData", function () {
+    return Meteor.users.find();
+});

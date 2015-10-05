@@ -1,28 +1,23 @@
 /*****************************************************************************/
-/* Course: Event Handlers */
+/* UpdateCourse: Event Handlers */
 /*****************************************************************************/
-Template.Course.events({
-
+Template.UpdateCourse.events({
 });
 
 /*****************************************************************************/
-/* Course: Helpers */
+/* UpdateCourse: Helpers */
 /*****************************************************************************/
-Template.Course.helpers({
-    'courseList':function(){
-        return Course.find({}).fetch();
-    }
-
+Template.UpdateCourse.helpers({
 });
 
 /*****************************************************************************/
-/* Course: Lifecycle Hooks */
+/* UpdateCourse: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Course.created = function () {
+Template.UpdateCourse.created = function () {
 };
 
-Template.Course.onRendered = function () {
+Template.UpdateCourse.rendered = function () {
 };
 
-Template.Course.destroyed = function () {
+Template.UpdateCourse.destroyed = function () {
 };
