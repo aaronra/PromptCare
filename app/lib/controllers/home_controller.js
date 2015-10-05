@@ -78,6 +78,9 @@ HomeController = RouteController.extend({
     },
     UpdateRoom:function(){
         this.render('UpdateRooms');
+    },
+    Invoice:function(){
+        this.render('Invoice');
     }
 
 });
