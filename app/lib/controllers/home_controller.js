@@ -81,6 +81,9 @@ HomeController = RouteController.extend({
     },
     Invoice:function(){
         this.render('Invoice');
+    },
+    Print:function(){
+        this.render('Print');
     }
 
 });

@@ -1,4 +1,13 @@
-<template name="Invoice">
+<template name="Print">
+    <style>
+        header {
+            display: none !important;
+        }
+
+        main {
+            padding-left: 0;
+        }
+    </style>
     <section class="invoice card">
         <!-- title row -->
         <div class="row">
@@ -122,17 +131,6 @@
                 </div>
             </div>
             <!-- /.col -->
-        </div>
-
-        <div class="row no-print">
-            <div class="col s12" style="border-bottom: none;">
-                <a href="/invoice/print" id="print" target="_blank" class="btn btn-default"><i class="fa fa-print"></i>
-                    Print</a>
-                <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
-                <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i>
-                    Generate PDF
-                </button>
-            </div>
         </div>
     </section>
 </template>

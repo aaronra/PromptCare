@@ -141,6 +141,13 @@ Router.route('invoice', {
     where: 'client'
 });
 
+Router.route('invoice/print', {
+    name: 'print',
+    controller: 'HomeController',
+    action: 'Print',
+    where: 'client'
+});
+
 Router.plugin('ensureSignedIn', {
     only: ['dashboard']
 });
