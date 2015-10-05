@@ -1,12 +1,16 @@
 <template name="Branches">
-    <h1>List Of Branches</h1>
-    <ul>
-        {{#each Branches}}
-            <li>{{this.name}}</li>
-            <li>{{this.address}}</li>
-            <li>{{#linkTo route='updateBranch' id=this._id }}Update Branch{{this._id}}{{/linkTo}}</li>
-            <li>{{> quickRemoveButton collection="Branches" _id=this._id}} </li>
 
-        {{/each}}
-    </ul>
+    <table class="striped">
+        <thead>
+        <tr>
+            <th data-field="name">Name</th>
+            <th data-field="address">Address</th>
+            <th data-field="address">Operation</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{> BranchesItem}}
+        </tbody>
+    </table>
+
 </template>

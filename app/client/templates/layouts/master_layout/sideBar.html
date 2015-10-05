@@ -50,12 +50,14 @@
                     </li>
                 </ul>
 
+
                 <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
                     <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
                         <i class="mdi-navigation-chevron-right left collapsableicon"></i>Courses</a>
 
                         <div class="collapsible-body" style="display: none;">
                             <ul>
+                                {{> CourseList}}
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddCourse'}}">Add New
                                     Course</a></li>
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddModule'}}">Add New
@@ -66,25 +68,41 @@
                 </ul>
             {{/if}}
             <!--Student-->
-            <li class="bold"><a href="{{pathFor 'Enroll'}}">Student Registration</a></li>
-            <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Student Schedule</a></li>
-            <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Student Billing</a></li>
-            <li class="bold"><a href="{{pathFor 'StudentInfo'}}">Student Information</a></li>
-
             <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Courses</a>
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                    <i class="mdi-navigation-chevron-right left collapsableicon"></i>Students</a>
 
                     <div class="collapsible-body" style="display: none;">
                         <ul>
-                            {{> CourseList}}
+
+                            {{#unless isAdmin}}
+                                <li class="bold"><a href="{{pathFor 'Enroll'}}">Student Registration</a></li>{{/unless}}
+                            <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Student Schedule</a></li>
+                            <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Student Billing</a></li>
+                            <li class="bold"><a href="{{pathFor 'StudentInfo'}}">Student Information</a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
+
             <!--Member-->
-            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Registration</a></li>
-            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Billing</a></li>
-            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Information</a></li>
+            <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                    <i class="mdi-navigation-chevron-right left collapsableicon"></i>Members</a>
+
+                    <div class="collapsible-body" style="display: none;">
+                        <ul>
+                            {{#unless isAdmin}}
+                                <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Registration</a></li>{{/unless}}
+                            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Billing</a></li>
+                            <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Information</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+
+
         {{else}}
             <li><a href="{{ pathFor 'atSignIn' }}">Sign in</a></li>
             <li><a href="{{ pathFor 'atSignUp' }}">Register</a></li>
