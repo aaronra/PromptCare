@@ -73,7 +73,9 @@
             <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Registration</a></li>
             <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Billing</a></li>
             <li class="bold"><a href="{{pathFor 'Enroll'}}">Member Information</a></li>
-
+        {{else}}
+            <li><a href="{{ pathFor 'atSignIn' }}">Sign in</a></li>
+            <li><a href="{{ pathFor 'atSignUp' }}">Register</a></li>
         {{/if}}
     </ul>
 </template>

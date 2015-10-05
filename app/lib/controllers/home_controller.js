@@ -53,5 +53,9 @@ HomeController = RouteController.extend({
     },
     MemberList: function () {
         this.render('MemberList');
+    },
+    Dashboard: function(){
+        this.render('Dashboard');
     }
+
 });

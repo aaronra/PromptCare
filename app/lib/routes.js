@@ -91,5 +91,15 @@ Router.route('subsribes/Member-List', {
     action: 'MemberList',
     where: 'client'
 });
+Router.route('dashboard', {
+    name: 'dashboard',
+    controller: 'HomeController',
+    action: 'Dashboard',
+    where: 'client'
+});
 
- Router.plugin('ensureSignedIn');
+Router.plugin('ensureSignedIn', {
+    only: ['dashboard']
+});
+
+
