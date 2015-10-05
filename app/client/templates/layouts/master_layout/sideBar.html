@@ -65,22 +65,26 @@
                 </ul>
 
 
-                <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
-                        <i class="mdi-navigation-chevron-right left collapsableicon"></i>Courses</a>
 
-                        <div class="collapsible-body" style="display: none;">
-                            <ul>
-                                {{> CourseList}}
+            {{/if}}
+            <!--Courses-->
+            <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
+                    <i class="mdi-navigation-chevron-right left collapsableicon"></i>Courses</a>
+
+                    <div class="collapsible-body" style="display: none;">
+                        <ul>
+                            {{> CourseList}}
+                            {{#unless isAdmin}}
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddCourse'}}">Add New
                                     Course</a></li>
                                 <li class="bold {{isActiveRoute 'AddCourse'}}"><a href="{{pathFor 'AddModule'}}">Add New
                                     Module</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            {{/if}}
+                            {{/unless}}
+                        </ul>
+                    </div>
+                </li>
+            </ul>
             <!--Student-->
             <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header  waves-effect waves-teal">
