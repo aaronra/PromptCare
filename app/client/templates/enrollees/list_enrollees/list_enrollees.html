@@ -1,0 +1,14 @@
+<template name="ListEnrollees">
+    {{#each Users}}
+        {{#if isEnrolled this}}
+            <tr>
+                <td>{{userName this}}</td>
+                <td>
+                    {{#if isAdmin}}
+                        <a id="admit" class="btn btn-primary" href="">Admit Enrollee</a>
+                    {{/if}}
+                </td>
+            </tr>
+        {{/if}}
+    {{/each}}
+</template>
