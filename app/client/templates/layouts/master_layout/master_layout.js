@@ -10,4 +10,5 @@ Template.MasterLayout.onRendered(function () {
         closeOnClick: true,
         'edge': 'left'
     });
+
 });
