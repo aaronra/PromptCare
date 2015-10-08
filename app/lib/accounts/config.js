@@ -23,17 +23,17 @@ var pwd = AccountsTemplates.removeField('password');
 AccountsTemplates.removeField('email');
 AccountsTemplates.addFields([
     {
-        _id: "gender",
+        _id: "type",
         type: "radio",
-        displayName: "Gender",
+        displayName: "",
         select: [
             {
-                text: "Male",
-                value: "male",
+                text: "Student",
+                value: "student",
             },
             {
-                text: "Female",
-                value: "female",
+                text: "Member",
+                value: "member",
             },
         ],
     },
@@ -49,23 +49,30 @@ AccountsTemplates.addFields([
     },
     {
         _id: 'birthDate',
-        type: 'select',
-        displayName: "Birth Month",
+        type: 'text',
+        displayName: "Birth Date",
+        template: "DateInput"
+
+    },
+    {
+        _id: "gender",
+        type: "radio",
+        displayName: "Gender",
         select: [
             {
-                text: "January",
-                value: "January",
+                text: "Male",
+                value: "male",
             },
             {
-                text: "February",
-                value: "February",
+                text: "Female",
+                value: "female",
             },
-
-            {
-                text: "March",
-                value: "March",
-            },
-        ]
+        ],
+    },
+    {
+        _id: 'phone',
+        type: 'tel',
+        displayName: "Contact No",
     },
     {
         _id: 'email',

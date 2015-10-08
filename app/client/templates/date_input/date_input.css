@@ -1,0 +1,16 @@
+/*****************************************************************************/
+/* DateInput: Style */
+/*****************************************************************************/
+.date-input {
+}
+.picker__weekday-display{
+    background-color: #2497f5 !important;
+}
+.picker__date-display{
+    background-color: #2497f5 !important;
+
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected{
+    background-color: #2497f5 !important;
+
+}
