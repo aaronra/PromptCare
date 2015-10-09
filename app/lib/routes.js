@@ -135,6 +135,12 @@ Router.route('subsribes/Member-List', {
     action: 'MemberList',
     where: 'client'
 });
+Router.route('subsribes/Member-Schedule', {
+    name: 'MemberSchedule',
+    controller: 'HomeController',
+    action: 'StudentSchedule',
+    where: 'client'
+});
 Router.route('dashboard', {
     name: 'dashboard',
     controller: 'HomeController',

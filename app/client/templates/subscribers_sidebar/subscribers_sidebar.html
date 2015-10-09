@@ -1,0 +1,17 @@
+<template name="SubscribersSidebar">
+    <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect">
+
+            <i class="mdi-navigation-arrow-drop-down left"></i>Subscribers</a>
+
+            <div class="collapsible-body" style="display: none;">
+                <ul>
+                    <li class="bold {{isActiveRoute 'MemberList'}}"><a href="{{pathFor 'MemberList'}}">Member
+                        List</a></li>
+                    <li class="bold {{isActiveRoute 'StudentSchedule'}}"><a href="{{pathFor 'MemberSchedule'}}">Send
+                        Schedule</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</template>

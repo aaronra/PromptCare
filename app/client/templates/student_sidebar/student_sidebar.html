@@ -1,0 +1,16 @@
+<template name="StudentSidebar">
+    <ul data-collapsible="accordion" class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect">
+            <i class="mdi-navigation-arrow-drop-down left"></i>Students</a>
+
+            <div class="collapsible-body" style="display: none;">
+                <ul>
+
+                    <li class="bold"><a href="{{pathFor 'Enroll'}}">Student Registration</a></li>
+                    <li class="bold"><a href="{{pathFor 'StudentSchedule'}}">Student Schedule</a></li>
+                    <li class="bold"><a href="{{pathFor 'StudentBilling'}}">Student Billing</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</template>
